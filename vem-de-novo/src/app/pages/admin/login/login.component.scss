@@ -1,0 +1,70 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa a altura total da viewport */
+  background-color: var(--ligth-pink-color); /* Use uma cor do seu :root */
+  padding: 20px;
+}
+
+.login-form {
+  background-color: var(--white-color);
+  padding: 40px;
+  border-radius: var(--border-radius-m);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-family: "Miniver", sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark-color);
+  font-weight: var(--font-weight-medium);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius-s);
+  font-size: var(--font-size-n);
+  outline: none;
+  &:focus {
+    border-color: var(--primary-color);
+  }
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 25px;
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s ease;
+  &:hover {
+    /* Use uma cor HEX direta para o hover para evitar o erro do Sass */
+    background-color: #0056b3; /* Exemplo de azul escuro. Ajuste para sua cor primária. */
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 15px;
+  font-size: var(--font-size-s);
+}

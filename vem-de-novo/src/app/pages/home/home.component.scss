@@ -1,0 +1,297 @@
+/* HERO section styling */
+.hero-section {
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+  justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details .subtitle {
+  margin-top: 8px;
+  max-width: 70%;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description {
+  max-width: 70%;
+  margin: 24px 0 40px;
+  font-size: var(--font-size-m);
+}
+
+.hero-section .hero-details .buttons {
+  display: flex;
+  gap: 23px;
+}
+
+.hero-section .hero-details .button {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius-m);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease;
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover {
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+.hero-section .hero-image-wrapper {
+  width: 100%;
+  margin-top: 100px;
+  box-shadow: rgb(245, 242, 242) 0px 25px 20px -20px;
+}
+
+/* About section styling (estilo sobre seção)*/
+.about-section {
+  padding: 120px 0;
+  background: var(--ligth-pink-color);
+}
+
+.about-section .section-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.about-section .about-details {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* ediçao do texto sobre nós */
+.about-section .about-details .text {
+  line-height: 30px;
+  margin: 50px 0 30px;
+  text-align: center;
+  font-size: var(--font-size-m);
+}
+
+/* posicionar os icones no meio espaçado */
+.about-section .social-link-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+  transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover {
+  color: var(--secondary-color);
+}
+
+/*Menu section styling*/
+
+.menu-section {
+  color: var(--white-color);
+  background-color: var(--dark-color);
+  padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.menu-section .menu-list .menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(33.33% - 40px);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.menu-section .menu-item img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: var(--border-radius-s);
+  margin-bottom: 15px;
+}
+
+.menu-section .menu-list .menu-item .menu-image {
+  max-width: 83%;
+  aspect-ratio: 1;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.menu-section .menu-list .menu-item .text {
+  margin: 12px 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+
+.menu-section .menu-list .menu-item .nav-menu {
+  margin: 12px 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-semibold);
+}
+
+/*Testimonials section styling*/
+
+.testimonials-section {
+  padding: 50px 0 100px;
+  background: var(--ligth-pink-color);
+}
+
+.testimonials-section .testimonial {
+  display: flex;
+  padding: 35px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-section .testimonial .user-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 50px;
+  border-radius: 50%;
+}
+
+.testimonials-section .testimonial .name {
+  margin-bottom: 16px;
+  font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonial .feedback {
+  line-height: 25px;
+}
+
+/*Contact us Section Styling (Estilo Seção de Contate-nos)*/
+
+.contact-section {
+  padding: 50px 0 100px;
+  background: var(--ligth-pink-color);
+}
+
+.contact-section .section-content {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contact-section .contact-info-list .contact-info {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+/* Código de consulta de mídia responsiva para largura máxima de 900px */
+@media screen and (max-width: 900px) {
+
+  .menu-section .menu-list .menu-item {
+    width: calc(50% - 40px); /* ajusta para 2 itens por linha em telas menores */
+  }
+
+  /* Font sizes (já estavam no styles.scss global, mas se quiserem ser específicas para este componente, podem ficar aqui) */
+  :root { /* Cuidado: :root aqui pode sobrescrever o global. Idealmente, defina font-size diretamente nas classes. */
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+  }
+
+  /* Deixei apenas as media queries que afetam os componentes dentro de home.component.html */
+  .hero-section .section-content {
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .hero-section .hero-details :is(.subtitle, .description),
+  .about-section .about-details {
+    max-width: 100%;
+  }
+
+  .hero-section .hero-details .buttons {
+    justify-content: center;
+  }
+
+  .hero-section .hero-image-wrapper {
+    max-width: 270px;
+    margin-right: 0;
+  }
+
+  .about-section .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .about-section .about-image-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-section .menu-list {
+    gap: 60px;
+  }
+
+  .menu-section .menu-list .menu-item {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .menu-section .menu-list .menu-item .menu-image {
+    max-width: 200px;
+  }
+}
+
+/* Código de consulta de mídia responsiva para largura máxima de 640px */
+@media screen and (max-width: 640px) {
+
+  .menu-section .menu-list {
+    gap: 60px;
+  }
+  .menu-section .menu-list .menu-item {
+    width: 100%; /* ajusta para 1 item por linha em telas pequenas */
+  }
+}

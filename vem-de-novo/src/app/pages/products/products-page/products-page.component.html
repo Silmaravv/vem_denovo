@@ -1,0 +1,20 @@
+<main class="products-page-main">
+  <section class="category-header">
+    <h1 *ngIf="currentCategory">Categoria: {{ currentCategory | titlecase }}</h1>
+    <h1 *ngIf="!currentCategory">Todos os Produtos</h1>
+    <p *ngIf="filteredProducts.length === 0" class="no-products-message">
+      Nenhum produto encontrado para esta categoria no momento.
+    </p>
+  </section>
+
+  <section class="products-grid">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <img [src]="product.imageUrl" [alt]="product.name" class="product-image">
+      <div class="product-details">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-price">{{ product.price | currency:'BRL':'symbol':'1.2-2':'pt' }}</p>
+        </div>
+    </div>
+  </section>
+</main>

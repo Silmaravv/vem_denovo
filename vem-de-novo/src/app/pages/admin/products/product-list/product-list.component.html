@@ -1,0 +1,31 @@
+<div class="product-list-container">
+  <h2>Gerenciar Produtos</h2>
+
+  <button class="add-product-button" (click)="goToAddProduct()">Adicionar Novo Produto</button>
+
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>R$ {{ product.price | number:'1.2-2' }}</td>
+        <td>
+          <a [routerLink]="['/admin/products/edit', product.id]" class="button edit-button">Editar</a>
+
+          <button class="delete-button" (click)="product.id && deleteProduct(product.id)">Excluir</button>
+        </td>
+      </tr>
+      <tr *ngIf="products.length === 0">
+        <td colspan="4">Nenhum produto encontrado.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

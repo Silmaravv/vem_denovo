@@ -1,0 +1,206 @@
+/* VEM Styling */
+
+:root {
+  --primary-color: #ffcccc;
+  --secondary-color: #ff99cc;
+  --white-color: #ffffff;
+  --dark-color: #333333;
+  --font-size-xl: 2em;
+  --font-size-l: 1.2em;
+  --font-size-m: 1em;
+  --font-weight-semibold: 600;
+  --border-radius-m: 8px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: var(--primary-color);
+}
+
+header .vem {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vem .nav-logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.vem .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.vem .nav-menu .nav-link {
+  padding: 10px 18px;
+  color: var(--white-color);
+  font-size: var(--font-size-m);
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.vem .nav-menu .nav-link:hover {
+  color: var(--primary-color);
+  background: var(--white-color);
+}
+
+.vem :where(#menu-close-button,#menu-open-button){
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  body.show-mobile-menu header::before{
+    content: " ";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 4;
+  }
+  .vem :where(#menu-close-button,#menu-open-button){
+    display: block;
+    font-size: var(--font-size-l);
+    color: var(--white-color);
+  }
+  .vem #menu-close-button{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: var(--dark-color);
+  }
+  .vem #menu-open-button{
+    color: var(--white-color);
+  }
+  .vem .nav-menu{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width:300px;
+    height: 100%;
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 100px;
+    transition: left 0.2s ease;
+    z-index: 5;
+  }
+  body.show-mobile-menu .vem .nav-menu{
+    left: 0;
+  }
+  .vem .nav-menu .nav-link{
+    color: var(--dark-color);
+    font-size: var(--font-size-l);
+    display: block;
+    margin-top: 17px;
+    background: none;
+  }
+  .vem .nav-menu .nav-link:hover{
+    color: var(--secondary-color);
+    background: none;
+  }
+}
+
+footer.footer-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+.footer-section .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 15px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.copyright-text {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.social-link-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-link-list .social-link {
+  color: #fff;
+  font-size: 32px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link-list .social-link:hover {
+  color: var(--secondary-color);
+}
+
+.social-link-list .social-link .fa-instagram:hover {
+  color: #E1306C;
+}
+
+.social-link-list .social-link .fa-youtube:hover {
+  color: #FF0000;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 80px; /* Ajuste este valor para a altura do seu cabeçalho fixo */
+  padding-bottom: 80px; /* Ajuste este valor para a altura do seu rodapé */
+}
+
+tml, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Evita scroll horizontal em alguns casos */
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  /* Ajuste estes valores de padding com base na altura real do seu header e footer */
+  padding-top: 80px; /* Estime a altura do seu cabeçalho fixo */
+  padding-bottom: 100px; /* Aumente este valor para dar mais espaço acima do rodapé */
+  box-sizing: border-box; /* Garante que padding não adicione mais altura do que o esperado */
+}

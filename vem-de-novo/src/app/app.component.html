@@ -1,0 +1,57 @@
+<header>
+  <nav class="vem section-content">
+    <a [routerLink]="['/']" class="nav-logo" style="cursor: pointer;">
+      <h2 class="logo-text"> 👗 Vem de novo</h2>
+    </a>
+
+    <ul class="nav-menu">
+      <button id="menu-close-button" class="fas fa-times" (click)="closeMobileMenu()"></button>
+
+      <li class="nav-item">
+        <a [routerLink]="[]" fragment="home" class="nav-link" (click)="closeMobileMenu()">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="[]" fragment="sobre" class="nav-link" (click)="closeMobileMenu()">Sobre</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="[]" fragment="estilos" class="nav-link" (click)="closeMobileMenu()">Estilos</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="[]" fragment="depoimentos" class="nav-link" (click)="closeMobileMenu()">Depoimentos</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="[]" fragment="contato" class="nav-link" (click)="closeMobileMenu()">Contato</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="['/produtos']" class="nav-link" (click)="closeMobileMenu()">Produtos</a>
+      </li>
+
+      <li class="nav-item">
+        <a [routerLink]="['/admin/login']" class="nav-link" (click)="closeMobileMenu()">Admin</a>
+      </li>
+    </ul>
+
+    <button id="menu-open-button" class="fas fa-bars" (click)="openMobileMenu()"></button>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer class="footer-section">
+  <div class="section-content">
+    <p class="copyright-text">© 2025 VEM DE NOVO</p>
+    <div class="social-link-list">
+      <a href="https://www.instagram.com/luciete_vasconcelos/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/@LucieteVasconcelosAtelier" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Canal no YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      </div>
+  </div>
+</footer>

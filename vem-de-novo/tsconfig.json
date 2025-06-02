@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "./",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,  // ADICIONE ESTA LINHA (essencial para Angular)
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",  // Mude de "bundler" para "node"
+    "useDefineForClassFields": false,  // Adicione para compatibilidade com Angular
+    "types": ["node"]  // Adicione tipos básicos
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "strictNullChecks": true
+  },
+  "files": [
+    "src/main.ts"  // Garante que o ponto de entrada seja reconhecido
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

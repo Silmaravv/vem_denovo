@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Vestido de Festa 'Aurora'",
+      "description": "Vestido longo em seda pura, com bordados à mão e detalhes em renda, ideal para eventos de gala. Peça única.",
+      "price": 850,
+      "imageUrl": "assets/images/vestido_aurora.jpg",
+      "artisanId": 1,
+      "category": "Vestidos"
+    },
+    {
+      "id": "2",
+      "name": "Conjunto 'Harmonia'",
+      "description": "Conjunto de saia midi e blusa cropped em linho texturizado, com estampas exclusivas inspiradas na natureza. Conforto e elegância.",
+      "price": 380,
+      "imageUrl": "assets/images/conjunto_harmonia.jpg",
+      "artisanId": 1,
+      "category": "Conjuntos"
+    },
+    {
+      "id": "3",
+      "name": "Trench Coat 'Elegance'",
+      "description": "Clássico trench coat reinventado, com modelagem acinturada e detalhes em botões de madeira. Perfeito para qualquer estação.",
+      "price": 520,
+      "imageUrl": "assets/images/trench_coat_elegance.jpg",
+      "artisanId": 2,
+      "category": "Trench Coat"
+    },
+    {
+      "id": "4",
+      "name": "Saia Rodada 'Sonho'",
+      "description": "Saia com caimento leve e rodado, confeccionada em algodão orgânico com estampa floral sutil. Versátil para o dia a dia.",
+      "price": 210,
+      "imageUrl": "assets/images/saia_sonho.jpg",
+      "artisanId": 2,
+      "category": "Saias"
+    },
+    {
+      "id": "5",
+      "name": "Macacão 'Moderno'",
+      "description": "Macacão pantacourt em viscose, com corte moderno e decote V, ideal para um visual prático e sofisticado.",
+      "price": 410,
+      "imageUrl": "assets/images/macacao_moderno.jpg",
+      "artisanId": 1,
+      "category": "Macacão"
+    },
+    {
+      "id": "ba8f",
+      "name": "Camiseta",
+      "description": "",
+      "price": 50,
+      "imageUrl": "https://down-br.img.susercontent.com/file/sg-11134201-7rd60-lx0fquksbja8f9",
+      "artisanId": 1,
+      "category": "Outros"
+    },
+    {
+      "id": "e882",
+      "name": "blusa azul",
+      "description": "",
+      "price": 10,
+      "imageUrl": "",
+      "artisanId": 1
+    },
+    {
+      "id": "eb4a",
+      "name": "Labubu",
+      "description": "",
+      "price": 2000,
+      "imageUrl": "",
+      "artisanId": 1
+    },
+    {
+      "id": "2b60",
+      "name": "sorvete",
+      "description": "",
+      "price": 100,
+      "imageUrl": "",
+      "artisanId": 1
+    }
+  ],
+  "artisans": [
+    {
+      "id": "1",
+      "name": "Luciete Vasconcelos Atelier",
+      "bio": "Artesã de alta costura com paixão por peças únicas e personalizadas. Criadora de tendências e sonhos em tecido."
+    },
+    {
+      "id": "2",
+      "name": "Vem de Novo Coleções",
+      "bio": "Foco em sustentabilidade e design atemporal, com peças que contam histórias e valorizam a arte do feito à mão."
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "username": "editor",
+      "password": "senha456",
+      "role": "editor"
+    }
+  ]
+}

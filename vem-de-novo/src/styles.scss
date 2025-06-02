@@ -1,0 +1,237 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Cores de variáveis CSS (coloque estas no seu :root) */
+:root {
+  /*color*/
+  --white-color: #fff;
+  --dark-color: #2e2e2e;
+  --primary-color: #ef879d; /* Rosa pêssego */
+  --secondary-color: #f7c1cc; /* Rosa claro complementar */
+  --ligth-pink-color: #fde8ec; /* Bem suave para fundos */
+  --medium-gray-color: #ccc; /* Para textos e detalhes */
+  --dark-gray-color: #555555; /* Adicionado para uso geral */
+  --error-color: #dc3545; /* Cor para mensagens de erro */
+  --success-color: #28a745; /* Cor para mensagens de sucesso */
+
+  /*Font-size*/
+  --font-size-s:0.9rem;
+  --font-size-n:1rem;
+  --font-size-m:1.12rem;
+  --font-size-l:1.5rem;
+  --font-size-xl:2rem;
+  --font-size-xxl:2.3rem;
+  --font-size-xxxl: 2.5rem; /* 40px */ /* Adicionado para títulos maiores */
+
+  /*Font-Weigth*/
+  --font-weight-normal:400;
+  --font-weight-medium:500;
+  --font-weight-semibold:600;
+  --font-weight-bold:700;
+
+  /* Border radius*/
+  --border-radius-s:8px;
+  --border-radius-m: 30px;
+  --border-radius-l: 15px; /* Adicionado para consistência */
+  --border-radius-xl: 20px; /* Adicionado para consistência */
+  --border-radius-circle:50%;
+  
+  /*Site max width*/
+  --site-max-width: 1300px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Usando a fonte Poppins definida no import */
+  background-color: #fff0f5; /* Cor de fundo geral do corpo */
+  color: #333; /* Cor de texto padrão */
+}
+
+/* Estilos de reset e elementos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+ul{
+ list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor:pointer;
+  border: none;
+  background: none;
+}
+
+img{
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--border-radius-s);
+}
+
+.section-content{
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: var(--site-max-width);
+}
+
+/* Título de seção geral */
+.section-title{
+  text-align:center;
+  padding: 60px 0 100px;
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+  color: var(--primary-color); /* Cor padrão para títulos de seção */
+  font-family: "Poppins", sans-serif; /* Fonte para títulos */
+}
+
+.section-title::after{
+  content: "";
+  width: 80px;
+  height: 5px;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: var(--border-radius-s);
+  background: var(--secondary-color);
+}
+
+/* Estilos do cabeçalho (Header Styling) */
+
+a, a:visited, a:focus, a:active, a:hover {
+  color: var(--white-color) !important; /* Força a cor branca em todos os estados */
+  text-decoration: none; /* Remove sublinhado (opcional) */
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color:var(--primary-color);
+}
+
+header .vem{
+  display:flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vem .nav-logo .logo-text{
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+.vem .nav-menu{
+  display: flex;
+  gap: 10px;
+}
+
+.vem .nav-menu .nav-link{
+  padding: 10px 18px;
+  color: var(--white-color); /* <<<< Mantém a cor branca */
+  font-size: var(--font-size-m) ;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+}
+
+.vem .nav-menu .nav-link:hover{
+  /* CORREÇÃO: Removido a mudança de cor do texto no hover, mantendo apenas a cor de fundo */
+  color: var(--white-color); /* Mantém a cor branca no hover */
+  background: var(--secondary-color);
+}
+
+.vem :where(#menu-close-button,#menu-open-button){
+  display: none;
+}
+
+/* Estilos do rodapé (Footer Styling) */
+.footer-section{
+  padding: 20px 0;
+  background: var(--dark-color);
+}
+
+.footer-section .section-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link){
+  color: var(--white-color);
+}
+
+/* Media Queries Globais (se aplicáveis a mais de um componente) */
+@media screen and (max-width: 900px) {
+  :root{
+    --font-size-m:1rem;
+    --font-size-l:1.3rem;
+    --font-size-xl:1.5rem;
+    --font-size-xxl:1.8rem;
+  }
+  
+  body.show-mobile-menu header::before{
+    content: " ";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .vem :where(#menu-close-button,#menu-open-button){
+    display: block;
+    font-size: var(--font-size-l);
+  }
+
+  .vem #menu-close-button{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .vem #menu-open-button{
+    color: var(--white-color);
+  }
+
+  .vem .nav-menu{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width:300px;
+    height: 100%;
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 100px;
+    background: var(--white-color);
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .vem .nav-menu{
+    left: 0;
+  }
+
+  .vem .nav-menu .nav-link{
+    color: var(--dark-color); /* <<<< Mantém a cor original do menu mobile */
+    font-size: var(--font-size-l);
+    display: block;
+    margin-top: 17px;
+    font-size: var(--font-size-l);
+  }   
+}
